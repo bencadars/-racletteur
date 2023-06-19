@@ -1,0 +1,26 @@
+<%= form_with model: @machine do |f| %>
+  <%= f.label :type %>
+  <%= f.text_field :type %>
+  <%= f.label :capacity %>
+  <%= f.text_field :capacity %>
+  <%= f.label :power %>
+  <%= f.text_field :power %>
+  <%= f.label :brand %>
+  <%= f.text_field :brand %>
+  <%= f.label :function %>
+  <%= f.text_field :function %>
+  <%= f.label :price %>
+  <%= f.text_field :price %>
+  <%= f.submit %>
+<% end %>
+
+
+   <%# t.string "type"
+    t.integer "capacity"
+    t.integer "power"
+    t.string "brand"
+    t.string "function"
+    t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false %>
