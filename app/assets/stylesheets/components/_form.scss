@@ -1,0 +1,21 @@
+abbr {
+  display:none;
+}
+
+.form-label::after {
+  color:red;
+  content: "*";
+  margin-right: 4px;
+}
+
+.login-link {
+  margin-left: 0px;
+  &:hover{
+    transition: color 0.3s
+  }
+}
+
+.or-text {
+  padding: 0 10px;
+  margin-left: 16px;
+}
