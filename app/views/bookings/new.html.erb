@@ -1,0 +1,15 @@
+<div class="container">
+<h5>Book This Raclette Machine Now!</h5>
+  <%= simple_form_for ([@machine, @booking]) do |f| %>
+    <%= f.input :start_date,
+                as: :string,
+                label: "Start Date",
+                input_html: { class: "form-input", data: { controller: "datepicker" } } %>
+    <%= f.input :end_date,
+                as: :string,
+                label: "End Date",
+                input_html: { class: "form-input", data: { controller: "datepicker" } } %>
+    <%= f.button :submit, "Book", class: "btn btn-primary btn-sm" %>
+  <% end %>
+
+</div>
