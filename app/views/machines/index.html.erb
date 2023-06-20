@@ -2,12 +2,12 @@
 <div class="d-flex">
 <% @machines.each do |machine| %>
   <div>
-    <%= machine.type %>
+    <%= machine.name %>
   </div>
   <div>
-    <%= machine.user.last_name %>
-    <%= machine.capacity %>
-    <%= link_to machine_path(machine), machine_path(machine.id)%>
+    Nom du Racletteur : <%= machine.user.last_name %>
+    Capacity : <%= machine.capacity %>
+    <%= link_to "details", machine_path(machine.id)%>
   </div>
 </div>
 <% end %>
