@@ -1,7 +1,43 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+puts "cleaning the database..."
+Machine.destroy_all
+User.destroy_all
+Booking.destroy_all
+
+puts "loading All Users..."
+user1 = User.create(first_name: "John", last_name: "Doe", phone_number: "1234567890", address: "123 Main Street", email: "john.doe@example.com", password: "password")
+user2 = User.create(first_name: "Jane", last_name: "Smith", phone_number: "9876543210", address: "456 Elm Street", email: "jane.smith@example.com", password: "password")
+user3 = User.create(first_name: "Michael", last_name: "Johnson", phone_number: "5551234567", address: "789 Oak Street", email: "michael.johnson@example.com", password: "password")
+user4 = User.create(first_name: "Emily", last_name: "Williams", phone_number: "7778889999", address: "321 Maple Avenue", email: "emily.williams@example.com", password: "password")
+user5 = User.create(first_name: "David", last_name: "Brown", phone_number: "4445556666", address: "987 Pine Lane", email: "david.brown@example.com", password: "password")
+user6 = User.create(first_name: "Sarah", last_name: "Davis", phone_number: "2223334444", address: "654 Cedar Court", email: "sarah.davis@example.com", password: "password")
+user7 = User.create(first_name: "Matthew", last_name: "Miller", phone_number: "8889990000", address: "852 Birch Road", email: "matthew.miller@example.com", password: "password")
+user8 = User.create(first_name: "Olivia", last_name: "Anderson", phone_number: "1112223333", address: "753 Spruce Street", email: "olivia.anderson@example.com", password: "password")
+user9 = User.create(first_name: "Christopher", last_name: "Taylor", phone_number: "6667778888", address: "369 Willow Drive", email: "christopher.taylor@example.com", password: "password")
+user10 = User.create(first_name: "Ava", last_name: "Moore", phone_number: "4447771111", address: "456 Oak Lane", email: "ava.moore@example.com", password: "password")
+
+
+puts "loading ALL Machines"
+
+machine1 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 4, power: 600, brand: "Livoo", function: "Traditionnelle", price: 50, user_id: user1.id)
+machine2 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 6, power: 800, brand: "Klarstein", function: "Grill", price: 80, user_id: user2.id)
+machine3 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 8, power: 1000, brand: "Lagrange", function: "Crêpe", price: 120, user_id: user3.id)
+machine4 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 10, power: 1200, brand: "H.koening", function: "Pierrade", price: 150, user_id: user4.id)
+machine5 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 4, power: 600, brand: "Tefal", function: "Traditionnelle", price: 50, user_id: user5.id)
+machine6 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 6, power: 800, brand: "Tefal", function: "Grill", price: 80, user_id: user6.id)
+machine7 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 8, power: 1000, brand: "Kitchen Chef ", function: "Crêpe", price: 120, user_id: user7.id)
+machine8 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 10, power: 1200, brand: "Nedis", function: "Pierrade", price: 150, user_id: user8.id)
+machine9 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 6, power: 700, brand: "Tristar", function: "Traditionnelle", price: 60, user_id: user9.id)
+machine10 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 8, power: 900, brand: "Proline", function: "Grill", price: 90, user_id: user10.id)
+machine11 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 10, power: 1100, brand: "Tefal", function: "Crêpe", price: 130, user_id: user1.id)
+machine12 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 4, power: 550, brand: "Princess", function: "Pierrade", price: 45, user_id: user3.id)
+machine13 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 6, power: 750, brand: "Kenwood", function: "Traditionnelle", price: 70, user_id: user4.id)
+machine14 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 8, power: 950, brand: "Tefal", function: "Grill", price: 100, user_id: user7.id)
+
+puts "loading bookings..."
+Booking.create([
+  { start_date: Date.today, end_date: Date.today + 7, status: "Confirmed", user_id: user3.id, machine_id: machine12.id },
+  { start_date: Date.today + 1, end_date: Date.today + 5, status: "Pending", user_id: user6.id, machine_id: machine10.id }
+]
+)
+
+puts "Finished"
