@@ -1,7 +1,21 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+<div class="banner">
   <div class="container">
-    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
+    <div class="row align-items-center">
+      <div class="col-lg-6 mt-lg-0">
+        <h1 class="mb-4" data-controller="texting" id="title"></h1>
+        <p class="mb-4">You're a cheese lover but you don't have a raclette machine? Racletteur is here for you! You have a machine but never use it? Become a racletteur!</p>
+        <%= simple_form_for :search, url: root_path, method: :get do |f| %>
+          <div class="search-form-control form-group mb-4">
+            <%= f.input :query, input_html: { class: 'form-control string required', id: 'search_query' }, label: false %>
+            <button name="button" type="submit" class="btn btn-flat">
+              <i class="fas fa-search"></i> Search
+            </button>
+          </div>
+        <% end %>
+      </div>
+      <div class="col-lg-6 text-lg-end">
+        <%= image_tag('6E59AEF1-4A9F-4D0A-B01A-FBC031927570.png', class: 'img-fluid mt-lg-0') %>
+      </div>
+    </div>
   </div>
 </div>
