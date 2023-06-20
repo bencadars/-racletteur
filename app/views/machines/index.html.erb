@@ -1,5 +1,15 @@
 <h1>Machines#index</h1>
+<div class="d-flex">
 <% @machines.each do |machine| %>
-<%= machine.type %>
-<%= machine.user_id %>
+  <div>
+    <%= machine.type %>
+  </div>
+  <div>
+    <%= machine.user.last_name %>
+    <%= machine.capacity %>
+    <%= link_to machine_path(machine), machine_path(machine.id)%>
+  </div>
+</div>
 <% end %>
+
+<%= link_to "new machine", new_machine_path, class: "btn btn-primary"%>
