@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag("4E3D4C76-54C0-442D-9E43-B8383ECBBE20.png", alt: "Logo") %>
+      <%= image_tag("9FBE8D58-D5D2-4370-9D62-31AEA3A5C502.png", alt: "Logo") %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,19 +11,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <%# if user_signed_in? %>
-          <li>
-            <button class="btn btn-flat" href="#">Add my raclette machine</button>
-          </li>
-          <li class="nav-item dropdown">
-            <%= image_tag("A62A7714-6D80-4547-AFAA-755743ECEFC7_1_105_c.jpeg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Log out", "#", class: "dropdown-item", data: { turbo_method: :delete } %>
-            </div>
-          </li>
+        <li class="nav-item">
+          <button class="btn btn-flat custom-button" type="button">Rent a machine</button>
+        </li>
+        <li class="nav-item dropdown">
+          <%= image_tag("54AB2A96-75FE-4403-918F-5BC899F4B53F.png", class: "avatar dropdown-toggle nav-avatar", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false) %>
+          <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <%= link_to "Log out", "#", class: "dropdown-item", data: { turbo_method: :delete } %>
+          </div>
+        </li>
         <%# else %>
-          <!-- <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li> -->
+        <!-- <li class="nav-item">
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        </li> -->
         <%# end %>
       </ul>
     </div>

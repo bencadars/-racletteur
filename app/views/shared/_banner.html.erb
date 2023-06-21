@@ -3,7 +3,7 @@
     <div class="row align-items-center">
       <div class="col-lg-6 mt-lg-0">
         <h1 class="mb-4" data-controller="texting" id="title"></h1>
-        <p class="mb-4">You're a cheese lover but you don't have a raclette machine? Racletteur is here for you! You have a machine but never use it? Become a racletteur!</p>
+        <p class="mb-4">You're a <strong>cheese lover</strong> but you don't have a raclette machine ? Racletteur is here for you !<br>You have a machine but never use it ? Become a <strong>racletteur</strong>!</p>
         <%= simple_form_for :search, url: root_path, method: :get do |f| %>
           <div class="search-form-control form-group mb-4">
             <%= f.input :query, input_html: { class: 'form-control string required', id: 'search_query' }, label: false %>
@@ -14,7 +14,7 @@
         <% end %>
       </div>
       <div class="col-lg-6 text-lg-end">
-        <%= image_tag('6E59AEF1-4A9F-4D0A-B01A-FBC031927570.png', class: 'img-fluid mt-lg-0') %>
+        <%= image_tag("Pink and White Modern Spring Sale Banner Template-3.png", class: 'img-fluid mt-lg-0') %>
       </div>
     </div>
   </div>
