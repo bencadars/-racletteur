@@ -38,6 +38,7 @@ machine12 = Machine.create!(name: "Appareil à raclette", description: "lorem ip
 machine13 = Machine.create!(name: "Appareil à raclette", description: "lorem ipsum", capacity: 6, power: 750, brand: "Kenwood", function: Machine::FUNCTION.sample, price: 70, user_id: user4.id)
 machine14 = Machine.create!(name: "Appareil à raclette", description: "lorem ipsum", capacity: 8, power: 950, brand: "Tefal", function: Machine::FUNCTION.sample, price: 100, user_id: user7.id)
 
+
 puts "loading bookings..."
 Booking.create([
   { start_date: Date.today, end_date: Date.today + 7, status: "Confirmed", user_id: user3.id, machine_id: machine12.id },
