@@ -1,3 +1,4 @@
+require "open-uri"
 puts "cleaning the database..."
 Machine.destroy_all
 User.destroy_all
@@ -18,7 +19,13 @@ user10 = User.create(first_name: "Ava", last_name: "Moore", phone_number: "44477
 
 puts "loading ALL Machines"
 
-machine1 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 4, power: 600, brand: "Livoo", function: "Traditionnelle", price: 50, user_id: user1.id)
+
+
+file = URI.open("https://www.lara-clette.com/blog/wp-content/uploads/2021/07/Russell-Hobbs-Appareil-Raclette-1200W-8-Prs-100x100.jpg")
+
+machine1 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 4, power: 600, brand: "Livoo", function: "Traditionnelle", price: 50, user_id: user1.id, )
+machine1.photo.attach(io: file, filename: "raclette.jpg", content_type: "image/jpg")
+machine1.save
 machine2 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 6, power: 800, brand: "Klarstein", function: "Grill", price: 80, user_id: user2.id)
 machine3 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 8, power: 1000, brand: "Lagrange", function: "Crêpe", price: 120, user_id: user3.id)
 machine4 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 10, power: 1200, brand: "H.koening", function: "Pierrade", price: 150, user_id: user4.id)

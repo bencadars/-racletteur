@@ -22,6 +22,6 @@ class MachinesController < ApplicationController
   private
 
   def machine_params
-    params.require(:machine).permit( :category, :capacity, :power, :brand, :function, :price, :user_id)
+    params.require(:machine).permit( :category, :capacity, :power, :brand, :function, :price, :user_id, :photo)
   end
 end

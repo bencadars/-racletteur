@@ -1,15 +1,14 @@
 <h1>Machines#index</h1>
-<div class="d-flex">
-<% @machines.each do |machine| %>
-  <div>
-    <%= machine.name %>
-  </div>
-  <div>
-    Nom du Racletteur : <%= machine.user.last_name %>
-    Capacity : <%= machine.capacity %>
-    <%= link_to "details", machine_path(machine.id)%>
-  </div>
+<div class="raclette-cards">
+  <% @machines.each do |machine| %>
+    <div class="card-product">
+      <%= cl_image_tag @machine.photo.key, height: 100, width: 100, crop: :fill %>
+      <div class="card-product-infos">
+        <h2><%= machine.name %></h2>
+        <p><%= machine.description %></p>
+        <%= link_to "details", machine_path(machine)%>
+      </div>
+    </div>
+  <% end %>
 </div>
-<% end %>
-
-<%= link_to "new machine", new_machine_path, class: "btn btn-primary"%>
+<%= link_to "Add a Raclette", new_machine_path, class: "btn btn-primary"%>
