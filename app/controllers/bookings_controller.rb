@@ -22,6 +22,10 @@ class BookingsController < ApplicationController
     @user = current_user
   end
 
+  def exclude_banner?
+    true
+  end
+
   private
   def booking_params
     params.require(:booking).permit(:start_date, :end_date)

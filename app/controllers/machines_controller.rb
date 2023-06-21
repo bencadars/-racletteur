@@ -20,6 +20,10 @@ class MachinesController < ApplicationController
     redirect_to machines_path
   end
 
+  def exclude_banner?
+    true
+  end
+  
   private
 
   def machine_params

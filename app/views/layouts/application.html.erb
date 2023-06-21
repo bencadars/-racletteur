@@ -11,8 +11,10 @@
   </head>
 
   <body>
-    <%=render "shared/navbar"%>
+   <%=render "shared/navbar"%>
+    <% if ["pages"].include?(params[:controller]) %>
     <%=render "shared/banner"%>
+    <% end %>
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
