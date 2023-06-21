@@ -1,3 +1,117 @@
 body {
   min-height: 80vh;
   }
+
+  .white-block {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .white-block h4,
+  .white-block h5 {
+    color: #333;
+  }
+
+  .white-block .features-list {
+    padding-left: 0;
+  }
+
+  .white-block .characteristic
+
+  // .machine_bloc_infos {
+  //   background-color: #f9f9f9;
+  //   padding: 20px;
+  //   border-radius: 5px;
+  // }
+
+  // .desc-bloc {
+  //   margin-bottom: 20px;
+  //   margin-top: 20px;
+  // }
+
+  // .description-title {
+  //   font-weight: bold;
+  // }
+
+  // .description-content {
+  //   margin-top: 10px;
+  // }
+
+  // .features-section {
+  //   margin-bottom: 30px;
+
+  // }
+
+  // .product_section {
+  //   font-weight: bold;
+  //   margin-bottom: 10px;
+  //   margin-top: 100px;
+  // }
+
+  // .characteristic-item {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   margin-bottom: 10px;
+  // }
+
+  // .characteristic-title {
+  //   font-weight: bold;
+  // }
+
+  // .characteristic-label {
+  //   margin-left: 10px;
+  // }
+
+  .back-button {
+    margin-top: 30px;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .booking-success {
+    font-size: 24px;
+    color: #2ecc71;
+  }
+
+  .booking-info {
+    font-size: 18px;
+    color: #3498db;
+  }
+
+  .booking-recap {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .booking-details {
+    margin-top: 10px;
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .booking-details li {
+    margin-bottom: 5px;
+  }
+
+  .booking-link {
+    color: #3498db;
+  }
+
+  .back-button {
+    margin-top: 20px;
+  }
+
+  .booking-confirmation {
+      background-color: #f9f9f9;
+      margin: 50px;
+      padding: 20px;
+      border-radius: 5px;
+    }
