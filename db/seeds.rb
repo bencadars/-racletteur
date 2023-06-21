@@ -19,26 +19,25 @@ user10 = User.create(first_name: "Ava", last_name: "Moore", phone_number: "44477
 
 puts "loading ALL Machines"
 
-
-
 file = URI.open("https://www.lara-clette.com/blog/wp-content/uploads/2021/07/Russell-Hobbs-Appareil-Raclette-1200W-8-Prs-100x100.jpg")
-
-machine1 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 4, power: 600, brand: "Livoo", function: "Traditionnelle", price: 50, user_id: user1.id, )
+machine1 = Machine.create!(name: "Great machine to rent for 15p", description:"For cheese connoisseurs:Rent our Swiss Deluxe Raclette Master and experience the ultimate raclette journey. This high-end machine allows you to delicately melt your favorite cheeses, creating sophisticated flavor combinations. Perfect for cheese enthusiasts seeking an exceptional raclette experience.", capacity: 4, power: 600, brand: "Livoo", function: Machine::FUNCTION.sample, price: 50, user_id: user1.id)
 machine1.photo.attach(io: file, filename: "raclette.jpg", content_type: "image/jpg")
 machine1.save
-machine2 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 6, power: 800, brand: "Klarstein", function: "Grill", price: 80, user_id: user2.id)
-machine3 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 8, power: 1000, brand: "Lagrange", function: "Crêpe", price: 120, user_id: user3.id)
-machine4 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 10, power: 1200, brand: "H.koening", function: "Pierrade", price: 150, user_id: user4.id)
-machine5 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 4, power: 600, brand: "Tefal", function: "Traditionnelle", price: 50, user_id: user5.id)
-machine6 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 6, power: 800, brand: "Tefal", function: "Grill", price: 80, user_id: user6.id)
-machine7 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 8, power: 1000, brand: "Kitchen Chef ", function: "Crêpe", price: 120, user_id: user7.id)
-machine8 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 10, power: 1200, brand: "Nedis", function: "Pierrade", price: 150, user_id: user8.id)
-machine9 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 6, power: 700, brand: "Tristar", function: "Traditionnelle", price: 60, user_id: user9.id)
-machine10 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 8, power: 900, brand: "Proline", function: "Grill", price: 90, user_id: user10.id)
-machine11 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 10, power: 1100, brand: "Tefal", function: "Crêpe", price: 130, user_id: user1.id)
-machine12 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 4, power: 550, brand: "Princess", function: "Pierrade", price: 45, user_id: user3.id)
-machine13 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 6, power: 750, brand: "Kenwood", function: "Traditionnelle", price: 70, user_id: user4.id)
-machine14 = Machine.create(name: "Appareil à raclette", description: "lorem ipsum", capacity: 8, power: 950, brand: "Tefal", function: "Grill", price: 100, user_id: user7.id)
+machine2 = Machine.create!(name: "Raclette for 2 (lovers)", description: "For fans of tradition and conviviality:
+Gather your friends and family around our Rustic Traditional Raclette Grill. Enjoy the warm and friendly atmosphere of a traditional raclette. This sturdy model allows you to melt cheese directly on individual trays, savoring delicious flavor combinations. Ideal for unforgettable raclette evenings.", capacity: 6, power: 800, brand: "Klarstein", function: Machine::FUNCTION.sample, price: 80, user_id: user2.id)
+machine3 = Machine.create!(name: "Old School Savoyard Raclette", description: "Host intimate raclette parties with our Compact Raclette Party Set. This compact and convenient machine makes melting cheese a breeze. Its small size is perfect for limited spaces or casual get-togethers. Enjoy a cozy raclette experience on a smaller scale.", capacity: 8, power: 1000, brand: "Lagrange", function: Machine::FUNCTION.sample, price: 120, user_id: user3.id)
+machine4 = Machine.create!(name: "Raclette and crepes!", description: "Experience the best of both worlds with our Gourmet Raclette Grill with Stone Top. This versatile Machine allows you to enjoy delicious grilling while melting cheese for a gourmet raclette experience. Unleash your culinary creativity by combining meats, vegetables, and melted cheese. An unforgettable grilled raclette experience.", capacity: 10, power: 1200, brand: "H.koening", function: Machine::FUNCTION.sample, price: 150, user_id: user4.id)
+machine5 = Machine.create!(name: "Super tefal to rent", description: "Simplify your life with our Modern Electric Raclette Melter. This sleek electric machine is designed for easy and quick use. Simply place the cheese in the melting container and let it melt in minutes. Perfect for raclette lovers looking for a practical and hassle-free solution.", capacity: 4, power: 600, brand: "Tefal", function: Machine::FUNCTION.sample, price: 50, user_id: user5.id)
+machine6 = Machine.create!(name: "Raclette machine for 6", description: "lorem ipsum", capacity: 6, power: 800, brand: "Tefal", function: Machine::FUNCTION.sample, price: 80, user_id: user6.id)
+machine7 = Machine.create!(name: "Old fashioned machine", description: "lorem ipsum", capacity: 8, power: 1000, brand: "Kitchen Chef ", function: Machine::FUNCTION.sample, price: 120, user_id: user7.id)
+machine8 = Machine.create!(name: "Appareil à raclette", description: "lorem ipsum", capacity: 10, power: 1200, brand: "Nedis", function: Machine::FUNCTION.sample, price: 150, user_id: user8.id)
+machine9 = Machine.create!(name: "Appareil à raclette", description: "lorem ipsum", capacity: 6, power: 700, brand: "Tristar", function: Machine::FUNCTION.sample, price: 60, user_id: user9.id)
+machine10 = Machine.create!(name: "Appareil à raclette", description: "lorem ipsum", capacity: 8, power: 900, brand: "Proline", function: Machine::FUNCTION.sample, price: 90, user_id: user10.id)
+machine11 = Machine.create!(name: "Appareil à raclette", description: "lorem ipsum", capacity: 10, power: 1100, brand: "Tefal", function: Machine::FUNCTION.sample, price: 130, user_id: user1.id)
+machine12 = Machine.create!(name: "Appareil à raclette", description: "lorem ipsum", capacity: 4, power: 550, brand: "Princess", function: Machine::FUNCTION.sample, price: 45, user_id: user3.id)
+machine13 = Machine.create!(name: "Appareil à raclette", description: "lorem ipsum", capacity: 6, power: 750, brand: "Kenwood", function: Machine::FUNCTION.sample, price: 70, user_id: user4.id)
+machine14 = Machine.create!(name: "Appareil à raclette", description: "lorem ipsum", capacity: 8, power: 950, brand: "Tefal", function: Machine::FUNCTION.sample, price: 100, user_id: user7.id)
+
 
 puts "loading bookings..."
 Booking.create([

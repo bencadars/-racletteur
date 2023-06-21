@@ -1,9 +1,69 @@
-<h1><%= @machine.name %></h1>
-<p><%= @machine.description %></p>
-<p><%= @machine.capacity %></p>
-<p><%= @machine.power %></p>
-<p><%= @machine.function %></p>
-<p><%= @machine.price %></p>
-<p><%= cl_image_tag @machine.photo.key, height: 300, width: 400, crop: :fill %></p>
-<%= link_to "Booked this machine", machines_path, class: "btn btn-primary"%>
-<%= link_to "Liste des machines", machines_path, class: "btn btn-primary"%>
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="machine_bloc_infos white-block">
+        <h4><%= @machine.name %></h4>
+        <div class="desc-bloc">
+          <p class="description-title"><strong>Description:</strong></p>
+          <p class="description-content"><%= @machine.description %></p>
+          <% if @machine.photo.attached? %>
+            <%= cl_image_tag @machine.photo.key, height: 300, width: 400, crop: :fill %>
+          <% end %>
+        </div>
+        <div class="features-section">
+          <p class="product_section"><strong>Features</strong></p>
+          <div class="row">
+            <div class="col-6">
+              <ul class="features-list">
+                <li class="characteristic-item">
+                  <span class="characteristic-title">Functions:</span>
+                  <span class="characteristic-label"><%= @machine.function %></span>
+                </li>
+                <li class="characteristic-item">
+                  <span class="characteristic-title">Suitable for:</span>
+                  <span class="characteristic-label"><%= @machine.capacity %> people</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <ul class="features-list">
+                <li class="characteristic-item">
+                  <span class="characteristic-title">Power:</span>
+                  <span class="characteristic-label"><%= @machine.power %>W</span>
+                </li>
+                <li class="characteristic-item">
+                  <span class="characteristic-title">Rent price per day:</span>
+                  <span class="characteristic-label"><%= @machine.price %>€</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <br>
+        <br>
+        <div class="back-button">
+          <%= link_to "See other available Machines", machines_path, class: "btn btn-primary"%>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="booking_bloc_infos white-block">
+        <h5><strong>Book Now!</strong></h5>
+        <br>
+        <%= simple_form_for ([@machine, @booking]) do |f| %>
+          <%= f.input :start_date,
+                      as: :string,
+                      label: "Pick when you want to start melting cheese",
+                      input_html: { class: "form-input", data: { controller: "datepicker" } },
+                      required: true %>
+          <%= f.input :end_date,
+                      as: :string,
+                      label: "Pick when you had enough (if applicable)",
+                      input_html: { class: "form-input", data: { controller: "datepicker" } },
+                      required: true %>
+          <%= f.button :submit, "Yummy!", class: "btn btn-primary btn-sm" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

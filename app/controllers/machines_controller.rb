@@ -2,6 +2,7 @@ class MachinesController < ApplicationController
 
   def show
     @machine = Machine.find(params[:id])
+    @booking = Booking.new
   end
 
   def index
@@ -19,6 +20,10 @@ class MachinesController < ApplicationController
     redirect_to machines_path
   end
 
+  def exclude_banner?
+    true
+  end
+  
   private
 
   def machine_params
