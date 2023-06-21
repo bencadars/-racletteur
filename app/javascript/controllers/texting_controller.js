@@ -6,8 +6,8 @@ export default class extends Controller {
   connect() {
     console.log("bonjour");
     const typed = new Typed('#title', {
-      strings: ["A <strong>raclette</strong> you say?"],
-      typeSpeed: 70,
+      strings: ["A <strong>raclette</strong> you say ?"],
+      typeSpeed: 50,
       loop: false,
       loopCount: Infinity
     });
