@@ -6,6 +6,9 @@
         <div class="desc-bloc">
           <p class="description-title"><strong>Description:</strong></p>
           <p class="description-content"><%= @machine.description %></p>
+          <% if @machine.photo.attached? %>
+            <%= cl_image_tag @machine.photo.key, height: 300, width: 400, crop: :fill %>
+          <% end %>
         </div>
         <div class="features-section">
           <p class="product_section"><strong>Features</strong></p>

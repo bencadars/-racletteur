@@ -1,16 +1,18 @@
-<div class="container py-5">
+<div class="container-lg py-5">
   <div class="row">
-    <div class="col-12 col-md-6 offset-lg-3">
+    <div class="col-12">
       <div class="bg-white rounded p-3 shadow">
-        <h3>Create a new machine</h3>
-        <%= simple_form_for @machine do |f| %>
-          <%= f.input :name %>
-          <%= f.input :capacity %>
-          <%= f.input :power %>
-          <%= f.input :brand %>
-          <%= f.input :function %>
-          <%= f.input :price %>
-          <%= f.submit class: 'btn btn-flat' %>
+        <h5><strong>Add your Raclette machine to start renting it!</strong></h5>
+        <br>
+        <%= simple_form_for @machine, wrapper: :horizontal_form, html: { class: 'form-horizontal' } do |f| %>
+          <%= f.input :name, label: "Name of Your machine", wrapper_html: { class: 'row' }, label_html: { class: 'col-form-label col-md-3' }, input_html: { class: 'form-control', style: 'width: 400px' } %>
+          <%= f.input :capacity, label: "For how many people is your machine suitable for?", wrapper_html: { class: 'row' }, label_html: { class: 'col-form-label col-md-3' }, input_html: { class: 'form-control', style: 'width: 100px' } %>
+          <%= f.input :description, label: "Describe your machine", wrapper_html: { class: 'row' }, label_html: { class: 'col-form-label col-md-3' }, input_html: { class: 'form-control', style: 'width: 400px' } %>
+          <%= f.input :brand, label: "The brand of your machine", wrapper_html: { class: 'row' }, label_html: { class: 'col-form-label col-md-3' }, input_html: { class: 'form-control', style: 'width: 300px' } %>
+          <%= f.input :function, collection: ["Raclette and grill", "Raclette, cheesy potatoes, fondue, tartiflette, hot box, and cheese crepe", "Raclette, grill stone, crepe maker", "Raclette and grill stone", "Raclette, grill, and plancha"], label: "Select type", wrapper_html: { class: 'row' }, label_html: { class: 'col-form-label col-md-3' }, input_html: { class: 'form-control', style: 'width: 300px' } %>
+          <%= f.input :power, label: "Power (in Watt)", wrapper_html: { class: 'row' }, label_html: { class: 'col-form-label col-md-3' }, input_html: { class: 'form-control', style: 'width: 200px' }, append: 'W' %>
+          <%= f.input :price, label: "Price per day (in €)", wrapper_html: { class: 'row' }, label_html: { class: 'col-form-label col-md-3' }, input_html: { class: 'form-control', style: 'width: 100px' }, append: '€' %>
+          <%= f.submit "Submit", class: 'btn btn-primary' %>
         <% end %>
       </div>
     </div>
