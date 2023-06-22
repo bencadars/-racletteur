@@ -20,23 +20,23 @@ user10 = User.create(first_name: "Ava", last_name: "Moore", phone_number: "44477
 puts "loading ALL Machines"
 
 file = URI.open("https://www.lara-clette.com/blog/wp-content/uploads/2021/07/Russell-Hobbs-Appareil-Raclette-1200W-8-Prs-100x100.jpg")
-machine1 = Machine.create!(name: "Great machine to rent for 15p", description:"For cheese connoisseurs:Rent our Swiss Deluxe Raclette Master and experience the ultimate raclette journey. This high-end machine allows you to delicately melt your favorite cheeses, creating sophisticated flavor combinations. Perfect for cheese enthusiasts seeking an exceptional raclette experience.", capacity: 15, power: 600, brand: "Livoo", function: Machine::FUNCTION.sample, price: 50, user_id: user1.id)
+machine1 = Machine.create!(name: "Great machine to rent for 15p", description:"For cheese connoisseurs:Rent our Swiss Deluxe Raclette Master and experience the ultimate raclette journey. This high-end machine allows you to delicately melt your favorite cheeses, creating sophisticated flavor combinations. Perfect for cheese enthusiasts seeking an exceptional raclette experience.", capacity: 15, power: 600, brand: "Livoo", function: Machine::FUNCTION.sample, price: 19, user_id: user1.id)
 machine1.photo.attach(io: file, filename: "raclette.jpg", content_type: "image/jpg")
 machine1.save
 machine2 = Machine.create!(name: "Raclette for 2 (lovers)", description: "For fans of tradition and conviviality:
 Gather your friends and family around our Rustic Traditional Raclette Grill. Enjoy the warm and friendly atmosphere of a traditional raclette. This sturdy model allows you to melt cheese directly on individual trays, savoring delicious flavor combinations. Ideal for unforgettable raclette evenings.", capacity: 6, power: 800, brand: "Klarstein", function: Machine::FUNCTION.sample, price: 80, user_id: user2.id)
 machine2.photo.attach(io: file, filename: "raclette.jpg", content_type: "image/jpg")
 machine2.save
-machine3 = Machine.create!(name: "Old School Savoyard Raclette", description: "Host intimate raclette parties with our Compact Raclette Party Set. This compact and convenient machine makes melting cheese a breeze. Its small size is perfect for limited spaces or casual get-togethers. Enjoy a cozy raclette experience on a smaller scale.", capacity: 8, power: 1000, brand: "Lagrange", function: Machine::FUNCTION.sample, price: 120, user_id: user3.id)
+machine3 = Machine.create!(name: "Old School Savoyard Raclette", description: "Host intimate raclette parties with our Compact Raclette Party Set. This compact and convenient machine makes melting cheese a breeze. Its small size is perfect for limited spaces or casual get-togethers. Enjoy a cozy raclette experience on a smaller scale.", capacity: 8, power: 1000, brand: "Lagrange", function: Machine::FUNCTION.sample, price: 10, user_id: user3.id)
 machine3.photo.attach(io: file, filename: "raclette.jpg", content_type: "image/jpg")
 machine3.save
-machine4 = Machine.create!(name: "Raclette and crepes!", description: "Experience the best of both worlds with our Gourmet Raclette Grill with Stone Top. This versatile Machine allows you to enjoy delicious grilling while melting cheese for a gourmet raclette experience. Unleash your culinary creativity by combining meats, vegetables, and melted cheese. An unforgettable grilled raclette experience.", capacity: 10, power: 1200, brand: "H.koening", function: Machine::FUNCTION.sample, price: 150, user_id: user4.id)
+machine4 = Machine.create!(name: "Raclette and crepes!", description: "Experience the best of both worlds with our Gourmet Raclette Grill with Stone Top. This versatile Machine allows you to enjoy delicious grilling while melting cheese for a gourmet raclette experience. Unleash your culinary creativity by combining meats, vegetables, and melted cheese. An unforgettable grilled raclette experience.", capacity: 10, power: 1200, brand: "H.koening", function: Machine::FUNCTION.sample, price: 12, user_id: user4.id)
 machine4.photo.attach(io: file, filename: "raclette.jpg", content_type: "image/jpg")
 machine4.save
-machine5 = Machine.create!(name: "Super tefal to rent", description: "Simplify your life with our Modern Electric Raclette Melter. This sleek electric machine is designed for easy and quick use. Simply place the cheese in the melting container and let it melt in minutes. Perfect for raclette lovers looking for a practical and hassle-free solution.", capacity: 4, power: 600, brand: "Tefal", function: Machine::FUNCTION.sample, price: 50, user_id: user5.id)
+machine5 = Machine.create!(name: "Super tefal to rent", description: "Simplify your life with our Modern Electric Raclette Melter. This sleek electric machine is designed for easy and quick use. Simply place the cheese in the melting container and let it melt in minutes. Perfect for raclette lovers looking for a practical and hassle-free solution.", capacity: 4, power: 600, brand: "Tefal", function: Machine::FUNCTION.sample, price: 16, user_id: user5.id)
 machine5.photo.attach(io: file, filename: "raclette.jpg", content_type: "image/jpg")
 machine5.save
-machine6 = Machine.create!(name: "Raclette machine for 6", description: "lorem ipsum", capacity: 6, power: 800, brand: "Tefal", function: Machine::FUNCTION.sample, price: 80, user_id: user6.id)
+machine6 = Machine.create!(name: "Raclette machine for 6", description: "lorem ipsum", capacity: 6, power: 800, brand: "Tefal", function: Machine::FUNCTION.sample, price: 10, user_id: user6.id)
 machine6.photo.attach(io: file, filename: "raclette.jpg", content_type: "image/jpg")
 machine6.save
 # machine7 = Machine.create!(name: "Old fashioned machine", description: "lorem ipsum", capacity: 8, power: 1000, brand: "Kitchen Chef ", function: Machine::FUNCTION.sample, price: 120, user_id: user7.id)
@@ -51,8 +51,16 @@ machine6.save
 
 puts "loading bookings..."
 Booking.create([
-  { start_date: Date.today, end_date: Date.today + 7, status: "Confirmed", user_id: user3.id, machine_id: machine3.id },
-  { start_date: Date.today + 1, end_date: Date.today + 5, status: "Pending", user_id: user6.id, machine_id: machine6.id }
+  { start_date: Date.today, end_date: Date.today + 7, status: "Pending", user_id: user3.id, machine_id: machine1.id },
+  { start_date: Date.today, end_date: Date.today + 7, status: "Pending", user_id: user3.id, machine_id: machine1.id },
+  { start_date: Date.today, end_date: Date.today + 7, status: "Pending", user_id: user3.id, machine_id: machine1.id },
+  { start_date: Date.today, end_date: Date.today + 7, status: "Pending", user_id: user3.id, machine_id: machine1.id },
+  { start_date: Date.today, end_date: Date.today + 7, status: "Pending", user_id: user3.id, machine_id: machine1.id },
+  { start_date: Date.today, end_date: Date.today + 7, status: "Pending", user_id: user3.id, machine_id: machine1.id },
+  { start_date: Date.today + 1, end_date: Date.today + 5, status: "Pending", user_id: user6.id, machine_id: machine1.id },
+  { start_date: Date.today, end_date: Date.today + 7, status: "Pending", user_id: user1.id, machine_id: machine4.id },
+  { start_date: Date.today, end_date: Date.today + 10, status: "Pending", user_id: user1.id, machine_id: machine5.id },
+  { start_date: Date.today, end_date: Date.today + 15, status: "Pending", user_id: user1.id, machine_id: machine2.id }
 ]
 )
 

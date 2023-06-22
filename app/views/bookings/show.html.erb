@@ -1,16 +1,23 @@
 <div class="booking-confirmation">
-  <h4 class="booking-success">Congratulations! Your booking request has been sent</h4>
-  <h5 class="booking-info">We will send you an email confirmation as soon as it's validated by the owner</h5>
-  <p class="booking-recap">Here is a recap of your booking request:</p>
-  <ul class="booking-details">
-    <li>
-      The Machine you want to rent:
-      <%= link_to @booking.machine.name, machine_path(@booking.machine), class: "booking-link" %>
-    </li>
-    <li>The Date you want to pick up the machine: <%= @booking.start_date %></li>
-    <li>The Date you want to return it: <%= @booking.start_date %></li>
-  </ul>
+  <h4>Congratulations! Your booking request has been sent</h4>
+  <h5>We will send you an email confirmation as soon as it's validated by the owner</h5>
+</div>
+  <div class="booking-details">
+    <p>Here is a recap of your booking request:</p>
+    <ul><li>The Machine you want to rent:
+          <%= link_to @booking.machine.name, machine_path(@booking.machine), class: "booking-link" %>
+        </li>
+        <li>The Date you want to pick up the machine: <%= @booking.start_date %></li>
+        <li>The Date you want to return it: <%= @booking.start_date %></li>
+        <li>The Status of your request: <strong><%= @booking.status %></strong></li>
+    </ul>
+  </div>
+</div>
+<div class="align-div">
 <div class="back-button">
-  <%= link_to "Back to Home", root_path, class: "btn btn-primary"%>
+  <%= link_to "Back to Home", root_path, class: "add-machine-btn"%>
+</div>
+<div class="back-button">
+  <%= link_to "See all your bookings", bookings_path, class: "add-machine-btn custom-button"%>
 </div>
 </div>
