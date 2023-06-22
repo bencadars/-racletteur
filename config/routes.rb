@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   resources :machines, only: [:index, :show, :new, :create] do
     resources :bookings, only: [:create, :new]
   end
-  resources :bookings, only: [:show, :update, :edit]
+  resources :bookings, only: [:show, :update, :edit, :index]
+  namespace :owner do
+    resources :bookings, only: [:index, :update]
+  end
   # Defines the root path route ("/")
   # root "articles#index"
 end

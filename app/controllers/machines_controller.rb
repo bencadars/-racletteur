@@ -19,11 +19,7 @@ class MachinesController < ApplicationController
     @machine.save!
     redirect_to machine_path(@machine)
   end
-
-  def exclude_banner?
-    true
-  end
-
+  
   private
 
   def machine_params
