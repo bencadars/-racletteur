@@ -25,41 +25,26 @@ body {
     padding-right: 20px;
   }
 
-  .back-button {
-    margin-top: 30px;
-  }
 
   .container {
-    max-width: 600px;
     margin: 0 auto;
-    text-align: center;
-  }
-
-  .booking-success {
-    font-size: 24px;
-    color: #2ecc71;
-  }
-
-  .booking-info {
-    font-size: 18px;
-    color: #3498db;
-  }
-
-  .booking-recap {
-    margin-top: 20px;
-    font-size: 16px;
-    font-weight: bold;
+    text-align: left;
+    justify-content: space-around;
+    align-items: flex-start;
   }
 
   .booking-details {
-    margin-top: 10px;
-    list-style: none;
-    padding-left: 0;
-    text-align: left;
-  }
-
-  .booking-details li {
-    margin-bottom: 5px;
+      background-color: #f9f9f9;
+      margin: 50px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      padding: 20px;
+      border-radius: 5px;
+      position: relative;
+      p {
+        font-size: 20px;
+        font-weight: bold;
+      }
   }
 
   .booking-link {
@@ -67,12 +52,54 @@ body {
   }
 
   .back-button {
-    margin-top: 20px;
+      margin: 50px;
+      padding: 0px;
+      border-radius: 5px;
   }
 
   .booking-confirmation {
       background-color: #f9f9f9;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
       margin: 50px;
       padding: 20px;
       border-radius: 5px;
+      h4 {
+        font-size: 24px;
+        font-weight: bold;
+        color:#2ecc71
+      }
+      h5 {
+        font-size: 18px;
+        color: #3498db;
+      }
+    }
+
+    .my-bookings {
+      background-color: white;
+      margin: 50px;
+      margin-bottom: 10px;
+      padding: 20px;
+      border-radius: 5px;
+      h4 {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 10px;
+      }
+    }
+
+    .action-booking {
+      background-color: #ffea53;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 20px;
+      text-decoration: none;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
+
+    .align-div {
+      display: flex;
+      align-items: flex-start;
     }
