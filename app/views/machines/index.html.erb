@@ -1,8 +1,8 @@
-<h1>Machines#index</h1>
+<h4>Our Raclette Machines</h4>
 <div class="raclette-cards">
   <% @machines.each do |machine| %>
     <div class="card-product">
-      <%= cl_image_tag @machine.photo.key, height: 100, width: 100, crop: :fill %>
+      <%= cl_image_tag machine.photo.key, height: 100, width: 100, crop: :fill %>
       <div class="card-product-infos">
         <h2><%= machine.name %></h2>
         <p><%= machine.description %></p>
@@ -10,5 +10,6 @@
       </div>
     </div>
   <% end %>
-</div>
+  <%# <br>
 <%= link_to "Add a Raclette", new_machine_path, class: "btn btn-primary"%>
+</div>
