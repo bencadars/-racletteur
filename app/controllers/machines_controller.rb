@@ -17,13 +17,13 @@ class MachinesController < ApplicationController
     @machine = Machine.new(machine_params)
     @machine.user_id = current_user.id
     @machine.save!
-    redirect_to machines_path
+    redirect_to machine_path(@machine)
   end
 
   def exclude_banner?
     true
   end
-  
+
   private
 
   def machine_params

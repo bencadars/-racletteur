@@ -21,7 +21,6 @@ body {
   .card-product {
     margin-bottom: 20px;
     margin-top: 20px;
-    padding-left: 20px;
     padding-right: 20px;
   }
 
@@ -35,6 +34,10 @@ body {
     text-align: center;
   }
 
+  .container-fou {
+    max-width: 70vw;
+    margin: 0 auto;
+  }
   .booking-success {
     font-size: 24px;
     color: #2ecc71;

@@ -1,15 +1,23 @@
-<h4>Our Raclette Machines</h4>
-<div class="raclette-cards">
-  <% @machines.each do |machine| %>
-    <div class="card-product">
-      <%= cl_image_tag machine.photo.key, height: 100, width: 100, crop: :fill %>
-      <div class="card-product-infos">
-        <h2><%= machine.name %></h2>
-        <p><%= machine.description %></p>
-        <%= link_to "details", machine_path(machine)%>
-      </div>
-    </div>
-  <% end %>
-  <%# <br>
-<%= link_to "Add a Raclette", new_machine_path, class: "btn btn-primary"%>
+<div class="container-fou">
+  <h4>Our Raclette Machines</h4>
+  <div class="raclette-cards">
+    <% @machines.each do |machine| %>
+      <%= link_to machine_path(machine) do%>
+        <div class="card-product">
+          <%= cl_image_tag machine.photo.key, height: 100, width: 100 %>
+          <div class="card-product-infos position-relative">
+            <h2><%= machine.name %></h2>
+            <div>
+              <p class="description-content"><%= machine.description %></p>
+            </div>
+            <div class="position-absolute" style="bottom: 5px; right: 5px;">
+              <p class="fs-4"><%= machine.price %> € </p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+    <%# <br>
+  <%= link_to "Add a Raclette", new_machine_path, class: "btn btn-primary"%>
+  </div>
 </div>
