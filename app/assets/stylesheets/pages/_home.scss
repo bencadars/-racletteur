@@ -1,4 +1,3 @@
-// Specific CSS for your home-page
 body {
   padding: 2rem 0rem;
 }
@@ -19,26 +18,9 @@ body {
 
 .fa-users {
   margin-left: 0rem;
+  color: #ffea53;
 }
 
 .card-footer {
   font-size: 0.8rem;
-}
-
-.smaller-card {
-  max-width: 300px;
-  margin: 0 auto;
-}
-
-.btn-primary {
-  background-color: #ffde59;
-  border-color: #ffde59;
-}
-
-.text-info, .far {
-  color: #ffde59;
-}
-
-.text-info-custom {
-  color: #ffde59;
 }
