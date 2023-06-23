@@ -8,7 +8,7 @@
         <li>Machine booked: <%= link_to booking.machine.name, machine_path(booking.machine) %></li>
         <li>Start of booking: <%= booking.start_date %></li>
         <li>End of booking: <%= booking.end_date %></li>
-        <li>Status of booking: <%= booking.status %></li>
+        <li>Status of booking <span class="badge bg-secondary"><%= booking.status %></span></li>
         <% if booking.status == "Pending" %>
           <%= link_to "Validate", owner_booking_path(booking), data: { turbo_method: :patch }, class:"action-booking" %>
         <% end %>

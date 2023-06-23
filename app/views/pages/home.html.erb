@@ -14,7 +14,7 @@
   <br>
 
   <div class="cards">
-    <% @machines.take(5).each do |machine| %>
+    <% @machines.take(4).each do |machine| %>
     <div class="">
       <div class="card card-transition">
 
@@ -27,7 +27,7 @@
             <i class="fas fa-users yellow-icon"></i> 8 people
           </small>
           <p class="card-text"><%= machine.description %></p>
-          <button name="button" type="submit" class="btn btn-flat details-btn">
+          <button name="button" type="submit" class="custom-button add-machine-btn">
             <%= link_to "details", machine_path(machine)%>
           </button>
         </div>

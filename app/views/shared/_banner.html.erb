@@ -4,18 +4,10 @@
 <div class="banner">
   <div class="container-fluid">
     <div class="row align-items-center">
-      <div class="col-lg-6 mt-lg-0">
+      <div class="col-lg-6 mt-lg-0 ml-4">
         <h1 class="mb-4" data-controller="texting" id="title"></h1>
         <p class="mb-4">You're a <strong>cheese lover</strong> but you don't have a raclette machine? Rent one on Racletteur!<br><br>You have a machine but never use it? Become a <strong>racletteur</strong> to start making money with it!</p>
-        <br>
-        <%= simple_form_for :search, url: root_path, method: :get do |f| %>
-          <div class="search-form-control form-group mb-4">
-            <%= f.input :query, input_html: { class: 'form-control string required', id: 'search_query' }, label: false %>
-            <div class="input-group-append">
-              <button name="button" type="submit" class="btn btn-flat details-btn add-machine-btn">Browse your machine</button>
-            </div>
-          </div>
-        <% end %>
+        <%= link_to "Browse our machines", machines_path, class:"custom-button add-machine-btn" %>
       </div>
       <div class="col-lg-6 text-lg-end">
         <%= image_tag("Pink and White Modern Spring Sale Banner Template-3.png", class: 'img-fluid mt-lg-0') %>
