@@ -1,6 +1,9 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -18,9 +21,15 @@
   border: none;
   border-radius: 25px;
   padding: 10px 20px;
+  margin-right: 5px;
 }
 
 .add-machine-btn {
   color: white !important;
   text-decoration: none !important;
+}
+
+#navbarSupportedContent {
+  display: flex;
+  align-items: center;
 }

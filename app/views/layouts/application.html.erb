@@ -7,6 +7,7 @@
     <%= csp_meta_tag %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
@@ -14,8 +15,8 @@
   <body>
    <%=render "shared/navbar"%>
     <% if ["pages"].include?(params[:controller]) %>
-    <%=render "shared/banner"%>
-    <%=render "shared/search"%>
+      <%=render "shared/banner"%>
+      <%=render "shared/search"%>
     <% end %>
     <%= yield %>
     <p class="notice"><%= notice %></p>
