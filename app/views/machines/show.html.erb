@@ -3,7 +3,7 @@
     <div class="col-md-8">
       <div class="machine_bloc_infos white-block">
         <h4><%= @machine.name %></h4>
-        <div class="desc-bloc">
+        <div class="desc-bloc d-flex">
           <p class="description-title"><strong>Description:</strong></p>
           <p class="description-content"><%= @machine.description %></p>
           <% if @machine.photo.attached? %>
@@ -41,8 +41,8 @@
         </div>
         <br>
         <br>
-        <div class="back-button">
-          <%= link_to "See other available Machines", machines_path, class: "btn btn-primary"%>
+        <div class="">
+          <%= link_to "See other available Machines", machines_path, class: "custom-button add-machine-btn"%>
         </div>
       </div>
     </div>
@@ -61,7 +61,7 @@
                       label: "Pick when you had enough (if applicable)",
                       input_html: { class: "form-input", data: { controller: "datepicker" } },
                       required: true %>
-          <%= f.button :submit, "Yummy!", class: "btn btn-primary btn-sm" %>
+          <%= f.button :submit, "Yummy!", class: "custom-button add-machine-btn" %>
         <% end %>
       </div>
     </div>
