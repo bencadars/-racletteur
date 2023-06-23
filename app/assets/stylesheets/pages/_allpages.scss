@@ -26,6 +26,19 @@ body {
 
 
   .container {
+    // max-width: 600px;
+   // margin: 0 auto;
+    text-align: center;
+  }
+
+  .booking-success {
+    font-size: 24px;
+    color: #2ecc71;
+  }
+
+  .booking-info {
+    font-size: 18px;
+    color: #3498db;
     margin: 0 auto;
     text-align: left;
   }
