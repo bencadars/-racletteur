@@ -5,6 +5,13 @@ class MachinesController < ApplicationController
     @booking = Booking.new
   end
 
+  def search
+    query = params[:query]
+    @results = Machine.search_by_name_and_description_and_brand(query)
+    render :search_results
+  end
+
+
   def index
     @machines = Machine.all
   end
@@ -19,7 +26,7 @@ class MachinesController < ApplicationController
     @machine.save!
     redirect_to machine_path(@machine)
   end
-  
+
   private
 
   def machine_params

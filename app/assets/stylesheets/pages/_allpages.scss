@@ -6,7 +6,6 @@ body {
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
   .white-block h4,
@@ -14,9 +13,10 @@ body {
     color: #333;
   }
 
-  .white-block .features-list {
-    padding-left: 0;
+  .features-list {
+    margin-top:10px;
   }
+
 
   .card-product {
     margin-bottom: 20px;
@@ -118,6 +118,17 @@ body {
       display: flex;
       align-items: flex-start;
     }
+
+    .title-index {
+      background-color: white;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      padding: 20px;
+      border-radius: 5px;
+      h4 {
+        font-size: 24px;
+        font-weight: bold;
+      }
 
     .position-absolute .rounded-circle {
       background-color: #ffea53;

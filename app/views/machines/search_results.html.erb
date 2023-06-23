@@ -1,0 +1,30 @@
+<div class="container-fou">
+<div class="title-index">
+<h4>Search Results</h4>
+<% if @results.present? %>
+  <ul>
+  <div class="raclette-cards">
+  <% @results.each do |result| %>
+      <%= link_to machine_path(result) do %>
+        <div class="card-product">
+          <%= cl_image_tag result.photo.key, height: 100, width: 100 %>
+          <div class="card-product-infos position-relative">
+            <h2><%= result.name %></h2>
+            <div>
+              <p class="description-content"><%= result.description %></p>
+            </div>
+            <div class="position-absolute" style="bottom: 5px; right: 5px;">
+              <p class="fs-4"><%= result.price %> € </p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+<% else %>
+  <p>No results found.</p>
+<% end %>
+</div>
+  <div class="white-block">
+    <%= link_to "Back to Search", machines_path, class: "custom-button add-machine-btn"%>
+  </div>

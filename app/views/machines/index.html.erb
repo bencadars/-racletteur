@@ -1,8 +1,19 @@
 <div class="container-fou">
-  <h4>Our Raclette Machines</h4>
+<div class="title-index">
+  <h4>Browse All our great Raclette Machines:</h4>
+  <%= form_with url: search_machines_path, method: :get, class: "search-form-control form-group d-flex" do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Search by name, brand or description"
+  %>
+  <%= submit_tag "Search", class: "nav-link custom-button text-center" %>
+<% end %>
+</div>
+
   <div class="raclette-cards">
     <% @machines.each do |machine| %>
-      <%= link_to machine_path(machine) do%>
+      <%= link_to machine_path(machine) do %>
         <div class="card-product">
             <% if machine.photo.attached? %>
           <%= cl_image_tag machine.photo.key, height: 100, width: 100 %>
@@ -19,7 +30,7 @@
         </div>
       <% end %>
     <% end %>
-    <%# <br>
-  <%= link_to "Add a Raclette", new_machine_path, class: "btn btn-primary"%>
   </div>
+
+  <%= link_to "Rent your Machine", new_machine_path, class: "custom-button add-machine-btn" %>
 </div>

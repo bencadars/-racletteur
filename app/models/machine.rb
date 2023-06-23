@@ -4,4 +4,12 @@ class Machine < ApplicationRecord
   has_many :bookings, dependent: :destroy
   validates :function, inclusion: { in: FUNCTION }
   has_one_attached :photo
+
+  include PgSearch::Model
+  pg_search_scope :search_by_name_and_description_and_brand,
+    against: [:name, :description, :brand],
+    using: {
+      tsearch: { prefix: true }
+      }
+
 end
