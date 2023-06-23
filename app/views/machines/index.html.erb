@@ -4,7 +4,9 @@
     <% @machines.each do |machine| %>
       <%= link_to machine_path(machine) do%>
         <div class="card-product">
+            <% if machine.photo.attached? %>
           <%= cl_image_tag machine.photo.key, height: 100, width: 100 %>
+              <% end %>
           <div class="card-product-infos position-relative">
             <h2><%= machine.name %></h2>
             <div style="margin-right:7%">
