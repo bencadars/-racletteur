@@ -2,6 +2,34 @@ body {
   min-height: 80vh;
   }
 
+.container {
+  max-width: 1200px;
+  margin-top: 100px;
+  text-align: left;
+}
+
+.container-small {
+  max-width: 1000px;
+  margin-top: 100px;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.container-large {
+  max-width: 2000px;
+  margin-top: 100px;
+  text-align: left;
+}
+
+.container-fou {
+  max-width: 70vw;
+  margin: 0 auto;
+}
+
+.container-collection {
+  text-align: center;
+}
+
   .white-block {
     background-color: #fff;
     padding: 20px;
@@ -22,14 +50,57 @@ body {
     margin-bottom: 20px;
     margin-top: 20px;
     padding-right: 20px;
+    position: relative;
+  }
+
+  .card-product-infos {
+    width: 1000px;
+  }
+
+  .machine-price {
+    background-color: #ffea53;
+    position: absolute;
+    border-radius: 25px;
+    color: black;
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+    bottom: 5px;
+    right: 5px;
+    font-weight:bold;
+    font-size: small;
+    padding:4px;
+  }
+
+  .description-content {
+    width: 800px;
+    margin: 10px;
+  }
+
+  .col-lg-8 {
+    background-color: white;
+    position: relative;
+    h4 {
+      margin: 10px;
+      font-weight: bold;
+    }
   }
 
 
-  .container {
-    // max-width: 600px;
-   // margin: 0 auto;
-    text-align: center;
+  .machine-bloc-infos {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
   }
+
+  .description-bloc {
+    margin: 10px;
+  }
+
+  .photo-bloc {
+    margin: 10px;
+  }
+
 
   .booking-success {
     font-size: 24px;
@@ -43,10 +114,7 @@ body {
     text-align: left;
   }
 
-  .container-fou {
-    max-width: 70vw;
-    margin: 0 auto;
-  }
+
 
   .booking-details {
       background-color: #f9f9f9;
@@ -58,7 +126,6 @@ body {
       position: relative;
       p {
         font-size: 20px;
-        font-weight: bold;
       }
   }
 
@@ -67,7 +134,11 @@ body {
   }
 
   .back-button {
-      margin: 50px;
+      position: absolute;
+      bottom: 3px;
+      right: 3px;
+      margin: 30px;
+      margin-left: 10px;
       padding: 0px;
       border-radius: 5px;
   }

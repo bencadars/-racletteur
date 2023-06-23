@@ -4,11 +4,11 @@
   </div>
     <% @bookings.each do |booking| %>
       <div class="booking-details">
-        <li>Booking id: <%= booking.id %></li>
-        <li>Machine booked: <%= link_to booking.machine.name, machine_path(booking) %></li>
-        <li>Start of booking: <%= booking.start_date %></li>
-        <li>End of booking: <%= booking.end_date %></li>
-        <li>Status of booking: <%= booking.status %></li>
+        <p>Booking id: <%= booking.id %></p>
+        <p>Machine booked: <%= link_to booking.machine.name, machine_path(booking) %></p>
+        <p>Start of booking: <%= booking.start_date %></p>
+        <p>End of booking: <%= booking.end_date %></p>
+        <p>Status of booking <span class="badge bg-secondary"><%= booking.status %></span></p>
       </div>
     <% end %>
   </div>
