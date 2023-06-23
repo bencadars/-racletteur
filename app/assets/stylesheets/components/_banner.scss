@@ -1,8 +1,7 @@
-.banner {
+banner {
   background-color: #f8f9fa;
   padding: 50px 0;
 }
-
 
 .banner h1 {
   font-size: 32px;
@@ -25,12 +24,22 @@
   margin-right: 10px;
 }
 
-.search-form-control button {
+.details-btn {
   background-color: #ffea53;
-  color: #fff;
+  color: #f8f9fa;
   border: none;
   border-radius: 25px;
   padding: 10px 20px;
+}
+
+.details-btn:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.add-machine-btn {
+  color: #f8f9fa !important;
+  text-decoration: none !important;
 }
 
 .banner img {
