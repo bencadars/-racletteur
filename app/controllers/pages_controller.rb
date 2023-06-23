@@ -6,5 +6,6 @@ class PagesController < ApplicationController
   end
 
   def home
+    @machines = Machine.all
   end
 end
