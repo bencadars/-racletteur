@@ -1,4 +1,4 @@
-<div class="container-fou">
+<div class="container">
 <div class="title-index">
   <h4>Browse All our great Raclette Machines:</h4>
   <%= form_with url: search_machines_path, method: :get, class: "search-form-control form-group d-flex" do %>
@@ -18,13 +18,11 @@
             <% if machine.photo.attached? %>
           <%= cl_image_tag machine.photo.key, height: 100, width: 100 %>
               <% end %>
-          <div class="card-product-infos position-relative">
+          <div class="card-product-infos">
             <h2><%= machine.name %></h2>
-            <div style="margin-right:7%">
-              <p class="description-content"><%= machine.description %></p>
-            </div>
-            <div class="position-absolute rounded-circle" style="bottom: 5px; right: 5px;">
-              <p class="fs-6"><%= machine.price %>€/day</p>
+              <p><%= machine.description %></p>
+            <div class="machine-price">
+              <p><%= machine.price %>€/day</p>
             </div>
           </div>
         </div>
