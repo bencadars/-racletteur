@@ -16,7 +16,6 @@
    <%=render "shared/navbar"%>
     <% if ["pages"].include?(params[:controller]) %>
       <%=render "shared/banner"%>
-      <%=render "shared/search"%>
     <% end %>
     <%= yield %>
     <p class="notice"><%= notice %></p>
