@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="my-bookings">
+    <h4>Bookings needing your attention</h4>
+  </div>
+    <% @bookings.each do |booking| %>
+      <div class="booking-details" data-controller="sweet-alert">
+        <li>Booking id: <%= booking.id %></li>
+        <li>Machine booked: <%= link_to booking.machine.name, machine_path(booking.machine) %></li>
+        <li>Start of booking: <%= booking.start_date %></li>
+        <li>End of booking: <%= booking.end_date %></li>
+        <li>Status of booking: <%= booking.status %></li>
+        <% if booking.status == "Pending" %>
+          <%= link_to "Validate", owner_booking_path(booking), data: { turbo_method: :patch }, class:"action-booking" %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>
