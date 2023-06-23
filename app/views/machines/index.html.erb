@@ -7,11 +7,11 @@
           <%= cl_image_tag machine.photo.key, height: 100, width: 100 %>
           <div class="card-product-infos position-relative">
             <h2><%= machine.name %></h2>
-            <div>
+            <div style="margin-right:7%">
               <p class="description-content"><%= machine.description %></p>
             </div>
-            <div class="position-absolute" style="bottom: 5px; right: 5px;">
-              <p class="fs-4"><%= machine.price %> € </p>
+            <div class="position-absolute rounded-circle" style="bottom: 5px; right: 5px;">
+              <p class="fs-6"><%= machine.price %>€/day</p>
             </div>
           </div>
         </div>
